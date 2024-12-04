@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie de Photos Accessible</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="initializeGallery()">
+
+    <h1>Ma Galerie de Photos Interactive et Accessible</h1>
+
+    <div class="gallery-container">
+        <figure tabindex="0">
+            <img src="image1.png" alt="Plage au coucher du soleil" class="thumbnail" />
+            <figcaption>Plage au coucher du soleil</figcaption>
+        </figure>
+        <figure tabindex="0">
+            <img src="image2.png" alt="Forêt dense" class="thumbnail" />
+            <figcaption>image</figcaption>
+        </figure>
+        <figure tabindex="0">
+            <img src="image3.png" alt="Montagne enneigée" class="thumbnail" />
+            <figcaption>image</figcaption>
+        </figure>
+        <figure tabindex="0">
+            <img src="image4.png" alt="Lac calme" class="thumbnail" />
+            <figcaption>image</figcaption>
+        </figure>
+        <figure tabindex="0">
+            <img src="image5.png" alt="Fleurs colorées" class="thumbnail" />
+            <figcaption>image</figcaption>
+        </figure>
+        <figure tabindex="0">
+            <img src="image6.png" alt="Vue sur la ville la nuit" class="thumbnail" />
+            <figcaption>image</figcaption>
+        </figure>
+    </div>
+
+    <div id="photoModal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <div class="modal-content">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <img id="modalImage" src="" alt="Image agrandie">
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
